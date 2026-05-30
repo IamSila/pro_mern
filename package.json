@@ -1,0 +1,23 @@
+{
+  "name": "pro_mern",
+  "version": "1.0.0",
+  "description": "Learning mern stack",
+  "homepage": "https://github.com/IamSila/pro_mern#readme",
+  "bugs": {
+    "url": "https://github.com/IamSila/pro_mern/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IamSila/pro_mern.git"
+  },
+  "license": "ISC",
+  "author": "Sila Mulingi",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
