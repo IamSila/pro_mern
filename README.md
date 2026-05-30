@@ -6,4 +6,4 @@
 - express version used is 4
 
 
-
+- While working with a team, use package.json to check for exact versions being used.
