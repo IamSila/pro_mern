@@ -5,5 +5,12 @@
 - npm install <package> to install a package.
 - express version used is 4
 
-
 - While working with a team, use package.json to check for exact versions being used.
+
+# babel command
+
+installation -> check documentation
+run this to transform the jsx during build.
+
+`npx babel src --presets @babel/react --out-dir public`
+
