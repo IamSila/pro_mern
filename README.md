@@ -20,3 +20,5 @@ presets to be used can be saved in a configuration file called .babelrc [Should 
 
 To include polyfills add this in html ---> use the latest versions in other project.
 `<script src="https://unpkg.com/@babel/polyfill@7/dist/polyfill.min.js"></script>`
+
+- Commandline commands can be added to scripts in the package.json to automate them.
