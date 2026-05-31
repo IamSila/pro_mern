@@ -15,9 +15,10 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "nodemon -w server server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "babel src --out-dir public"
+    "compile": "babel src --out-dir public",
+    "watch": "babel src --out-dir public --watch --verbose"
   },
   "devDependencies": {
     "@babel/cli": "^7.29.7",
@@ -25,5 +26,8 @@
     "@babel/preset-env": "^7.29.7",
     "@babel/preset-react": "^7.29.7",
     "express": "^4.16.4"
+  },
+  "dependencies": {
+    "nodemon": "^1.19.4"
   }
 }
