@@ -22,3 +22,5 @@ To include polyfills add this in html ---> use the latest versions in other proj
 `<script src="https://unpkg.com/@babel/polyfill@7/dist/polyfill.min.js"></script>`
 
 - Commandline commands can be added to scripts in the package.json to automate them.
+
+- package.json has all the scripts for reference.
