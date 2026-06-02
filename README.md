@@ -24,3 +24,7 @@ To include polyfills add this in html ---> use the latest versions in other proj
 - Commandline commands can be added to scripts in the package.json to automate them.
 
 - package.json has all the scripts for reference.
+
+
+#REACT COMPONENTS
+- 
