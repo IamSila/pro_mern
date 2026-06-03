@@ -1,8 +1,6 @@
 "use strict";
 
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-var _react = _interopRequireDefault(require("react"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
 function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
 function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
@@ -15,7 +13,7 @@ function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.
 function _getPrototypeOf(t) { return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, _getPrototypeOf(t); }
 function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && _setPrototypeOf(t, e); }
 function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
-// class issueFilter
+{/**issue filter component */}
 var IssueFilter = /*#__PURE__*/function (_React$Component) {
   function IssueFilter() {
     _classCallCheck(this, IssueFilter);
@@ -25,23 +23,30 @@ var IssueFilter = /*#__PURE__*/function (_React$Component) {
   return _createClass(IssueFilter, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", null, "This is a placeholder for the IssueFilter");
+      return /*#__PURE__*/React.createElement("div", null, "This is a placeholder for the IssueFilter");
     }
   }]);
-}(_react.default.Component);
-var TableRow = /*#__PURE__*/function (_React$Component2) {
-  function TableRow() {
-    _classCallCheck(this, TableRow);
-    return _callSuper(this, TableRow, arguments);
+}(React.Component);
+{/**issue table row component */}
+var IssueRow = /*#__PURE__*/function (_React$Component2) {
+  function IssueRow() {
+    _classCallCheck(this, IssueRow);
+    return _callSuper(this, IssueRow, arguments);
   }
-  _inherits(TableRow, _React$Component2);
-  return _createClass(TableRow, [{
+  _inherits(IssueRow, _React$Component2);
+  return _createClass(IssueRow, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("table", null, /*#__PURE__*/_react.default.createElement("thead", null, /*#__PURE__*/_react.default.createElement("tr", null, /*#__PURE__*/_react.default.createElement("th", null, "ID"), /*#__PURE__*/_react.default.createElement("th", null, "Title"))));
+      var style = this.props.rowStyle;
+      return /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", {
+        style: style
+      }, this.props.issue_id), /*#__PURE__*/React.createElement("td", {
+        style: style
+      }, this.props.issue_title));
     }
   }]);
-}(_react.default.Component); // class issueTable
+}(React.Component);
+{/**issue table component */}
 var IssueTable = /*#__PURE__*/function (_React$Component3) {
   function IssueTable() {
     _classCallCheck(this, IssueTable);
@@ -51,10 +56,31 @@ var IssueTable = /*#__PURE__*/function (_React$Component3) {
   return _createClass(IssueTable, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", null, "This is a placeholder for the IssueTable");
+      var rowStyle = {
+        border: "1px solid silver",
+        padding: 4
+      };
+      return /*#__PURE__*/React.createElement("table", {
+        style: {
+          borderCollapse: "collapse"
+        }
+      }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+        style: rowStyle
+      }, "ID"), /*#__PURE__*/React.createElement("th", {
+        style: rowStyle
+      }, "Title"))), /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement(IssueRow, {
+        rowStyle: rowStyle,
+        issue_id: 1,
+        issue_title: "Error in  console when clicking Add"
+      }), /*#__PURE__*/React.createElement(IssueRow, {
+        rowStyle: rowStyle,
+        issue_id: 2,
+        issue_title: "Title of second issue"
+      })));
     }
   }]);
-}(_react.default.Component); // class issueAdd
+}(React.Component);
+{/**issueAdd component */}
 var IssueAdd = /*#__PURE__*/function (_React$Component4) {
   function IssueAdd() {
     _classCallCheck(this, IssueAdd);
@@ -64,10 +90,11 @@ var IssueAdd = /*#__PURE__*/function (_React$Component4) {
   return _createClass(IssueAdd, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement("div", null, "This is a placeholder for the IssueAdd");
+      return /*#__PURE__*/React.createElement("div", null, "This is a placeholder for the IssueAdd");
     }
   }]);
-}(_react.default.Component);
+}(React.Component);
+{/**Main component IssueList */}
 var IssueList = /*#__PURE__*/function (_React$Component5) {
   function IssueList() {
     _classCallCheck(this, IssueList);
@@ -77,9 +104,9 @@ var IssueList = /*#__PURE__*/function (_React$Component5) {
   return _createClass(IssueList, [{
     key: "render",
     value: function render() {
-      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("h1", null, "Issue Tracker"), /*#__PURE__*/_react.default.createElement(IssueFilter, null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement(IssueTable, null), /*#__PURE__*/_react.default.createElement("hr", null), /*#__PURE__*/_react.default.createElement(IssueAdd, null), /*#__PURE__*/_react.default.createElement("hr", null));
+      return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Issue Tracker"), /*#__PURE__*/React.createElement(IssueFilter, null), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(IssueTable, null), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(IssueAdd, null), /*#__PURE__*/React.createElement("hr", null));
     }
   }]);
-}(_react.default.Component);
-var element = /*#__PURE__*/_react.default.createElement(IssueList, null);
+}(React.Component);
+var element = /*#__PURE__*/React.createElement(IssueList, null);
 ReactDOM.render(element, document.getElementById('contents'));

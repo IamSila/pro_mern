@@ -27,4 +27,4 @@ To include polyfills add this in html ---> use the latest versions in other proj
 
 
 #REACT COMPONENTS
-- 
+- https://reactjs.org/docs/dom-elements.html. --> react documentation
